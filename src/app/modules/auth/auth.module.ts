@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './features/login/login.component';
 import {ButtonComponent} from '../../common/components/button/button.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import {ButtonComponent} from '../../common/components/button/button.component';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    ButtonComponent
+    ButtonComponent,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }

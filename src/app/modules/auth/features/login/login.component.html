@@ -3,18 +3,18 @@
     <div class="col-sm-4 offset-sm-4">
       <h1 class="text-center">Login</h1>
 
-      <form>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" class="form-control"/>
+          <input type="email" id="email" name="email" formControlName="email" class="form-control"/>
         </div>
 
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" class="form-control"/>
+          <input type="password" id="password" name="password" formControlName="password" m class="form-control"/>
         </div>
 
-        <app-button type="submit">Login</app-button>
+        <app-button type="submit" severity="primary">Login</app-button>
       </form>
     </div>
   </div>
