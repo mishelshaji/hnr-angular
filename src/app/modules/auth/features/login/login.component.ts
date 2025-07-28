@@ -12,7 +12,7 @@ export class LoginComponent {
 
   constructor(private fb: FormBuilder) {
     this.loginForm = fb.group({
-      email: [null, [Validators.email, Validators.required, Validators.minLength(6)]],
+      email: ['me@example.com', [Validators.email, Validators.required, Validators.minLength(6)]],
       password: [null, [Validators.required, Validators.minLength(6)]]
     });
   }

@@ -5,6 +5,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './features/login/login.component';
 import {ButtonComponent} from '../../common/components/button/button.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {InputFieldComponent} from '../../common/components/input-field/input-field.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     AuthRoutingModule,
     ButtonComponent,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    InputFieldComponent
   ]
 })
 export class AuthModule { }
