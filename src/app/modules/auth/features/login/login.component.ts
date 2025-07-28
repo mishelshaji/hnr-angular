@@ -12,14 +12,14 @@ export class LoginComponent {
 
   constructor(private fb: FormBuilder) {
     this.loginForm = fb.group({
-      email: [null, [Validators.email, Validators.required]],
+      email: [null, [Validators.email, Validators.required, Validators.minLength(6)]],
       password: [null, [Validators.required, Validators.minLength(6)]]
     });
   }
 
   login(){
     console.log(this.loginForm); // he form group.
-    console.log(this.loginForm.value); // The values object
-    console.log(this.loginForm.get('email')); // ngModel
+    // console.log(this.loginForm.value); // The values object
+    // console.log(this.loginForm.get('email')); // ngModel
   }
 }
